@@ -9,7 +9,7 @@ class EntryController < ApplicationController
 	    #render plain: @params['amount']
 	    
 	    entry1 = Entry.new(@params['title'], @params['category'], @params['amount'], @params['note'], @params['type_id'])
-	    	    
+	    entry1.commit()
 	    render plain: entry1.print()
 	    #render plain: "Hello, Rails"
 	end
@@ -23,7 +23,9 @@ class Entry
 	@credeb = cd
     end
     def commit()
-
+	client = Mysql2::Client.new(:host => 'localhost', :username => 'budget', :password => 'password', :database => 'budget_test')
+    	query = "INSERT INTO entry VALUES('#@title', '#@cat', '#@amount', '#@credeb', '#@notes');"
+	client.query(query)
     end
     def print()
 	rtn = ""
