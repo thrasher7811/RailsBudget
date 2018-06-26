@@ -1,0 +1,32 @@
+<h1>New Entry</h1>
+
+<%= form_with scope: :entry, url: entry_index_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :amount %><br>
+    <%= form.number_field :amount %>
+  </p>
+
+  <p>
+    <%= form.label :category %><br>
+    <%= form.text_field :category %>
+  </p>
+
+  <p>
+    <%= form.label :type %><br>
+    <%= form.select :type_id, options_for_select([['Credit', 'credit'], ['Debit', 'debit']]) %>
+  </p>
+
+  <p>
+    <%= form.label :note %><br>
+    <%= form.text_area :note %>
+  </p>
+ 
+  <p>
+    <%= form.submit :action => "create" %>
+  </p>
+<% end %>
