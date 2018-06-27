@@ -1,24 +1,6 @@
-# README
+Ruby 2.3.1
+Rails 5.2.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+6/22/18			Blank Rails App
+6/24/18			Add ability to enter a budget object and save to SQL
+6/27/18			After entry, all stored objects are displayed
